@@ -3,6 +3,11 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import UserProfile from './pages/UserProfile';
 import Login from './pages/Login';
+<<<<<<< Updated upstream
+=======
+import Debits from './pages/Debits';
+import Credits from './pages/Credits';
+>>>>>>> Stashed changes
 import axios from "axios"
 import './App.css'
 import AccountBalance from './pages/AccountBalance';
@@ -98,7 +103,13 @@ class App extends Component {
         <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  />
     
     );
+<<<<<<< Updated upstream
     const LogInComponent = () => (<Login user={this.state.currentUser} mockLogIn={this.mockLogIn} />)
+=======
+    const LogInComponent = () => (<Login user={this.state.currentUser} mockLogIn={this.mockLogIn} />);
+    const DebitsComponent = () => (<Debits debits={this.state.debits} accountBalance={this.state.accountBalance}/>);
+    const CreditsComponent = () => (<Credits credits={this.state.credits} accountBalance={this.state.accountBalance}/>);
+>>>>>>> Stashed changes
     
 
 
@@ -113,8 +124,14 @@ class App extends Component {
             <Route exact path="/" render={HomeComponent}/>
             <Route exact path="/userProfile" render={UserProfileComponent}/>
             <Route exact path="/login" render={LogInComponent}/>
+<<<<<<< Updated upstream
             <AccountBalance accountBalance={this.state.accountBalance}/>
 
+=======
+            <Route exact path="/debits" render={DebitsComponent}/>
+            <Route exact path="/credits" render={CreditsComponent}/>
+            </Switch>
+>>>>>>> Stashed changes
           </div>
         </Router>
         
