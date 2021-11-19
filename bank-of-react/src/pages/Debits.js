@@ -1,21 +1,21 @@
-// src/components/Credits.js
+// src/components/Debits.js
 
 import React, {Component} from 'react';
 import AccountBalance from './AccountBalance';
 import {Link} from 'react-router-dom';
 
-class Credits extends Component {
+class Debits extends Component {
   render() {
-    let credits = this.props.credits;
-    console.log(credits);
+    let debits = this.props.debits;
+    console.log(debits);
     return (
         <div>
-            <h1>Credits</h1>
+            <h1>Debits</h1>
             <div>
-          {credits.map( (credit) => {
+          {debits.map( (debit) => {
               return (
-                <div key={credit.id}>
-                <li>{credit.amount} {credit.description} {credit.date}</li>
+                <div key={debit.id}>
+                <li>{debit.amount} {debit.description} {debit.date}</li>
               </div> 
               )
           } )}
@@ -31,4 +31,4 @@ class Credits extends Component {
   }
 }
 
-export default Credits;
+export default Debits;
